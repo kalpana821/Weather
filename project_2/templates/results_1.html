@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/wea.css">
+    <title>Review</title>
+</head>
+
+<body>
+    <h1>Results</h1>
+
+    <div class="center">
+        <center><table border="1"></center>
+
+            <tr>
+                <th width="250">current_temperature</th>
+                <th>Celsius</th>
+                <th>current_pressure</th>
+                <th>current_humidity</th>
+                <th>date_time</th>
+                <th>weather_description</th>
+               
+            </tr>
+
+            {% for review in reviews %}
+
+            <tr>
+                <td> {{review['current_temperature']}} </td>
+                <td> {{review['Celsius']}} </td>
+                <td>{{review['current_pressure']}}</td>
+                <td>{{review['current_humidity']}}</td>
+                <td>{{review['date_time']}}</td>
+                <td>{{review['weather_description']}}</td>
+                
+            </tr>
+            {% endfor %}
+        </table>
+
+    </div>
+</body>
+
+</html>
